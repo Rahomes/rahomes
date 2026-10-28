@@ -24,12 +24,12 @@ const sans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.rahomesinteriorsworld.in"),
   title: {
     default: `${site.brand.fullName} · Interior Design`,
     template: `%s · ${site.brand.fullName}`,
   },
-  description:
-    "RA HOMES INTERIORS WORLD — residential interior design in Thiruninravur, Tamil Nadu. Modular kitchens, wardrobes, living spaces, and full-home turnkey interiors.",
+  description: site.seo.description,
   keywords: [
     "interior design",
     "RA HOMES",
@@ -41,9 +41,16 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: site.brand.fullName,
-    description: `${site.hero.headline} — residential interiors crafted with care.`,
+    description: site.seo.shareDescription,
+    url: "/",
+    siteName: site.brand.fullName,
     type: "website",
     locale: "en_IN",
+  },
+  twitter: {
+    card: "summary",
+    title: site.brand.fullName,
+    description: site.seo.shareDescription,
   },
   icons: {
     icon: [

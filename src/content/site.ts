@@ -10,6 +10,13 @@ export const site = {
     tagline: "INTERIORS WORLD",
     fullName: "RA HOMES INTERIORS WORLD",
   },
+  /** Page + social share copy — keep free of filler taglines like “masterpiece”. */
+  seo: {
+    description:
+      "RA HOMES INTERIORS WORLD — residential interior design in Thiruninravur, Tamil Nadu. Modular kitchens, wardrobes, living spaces, and full-home turnkey interiors.",
+    shareDescription:
+      "From modular kitchens to full-home interiors — planned with care, built with craft, finished for everyday comfort.",
+  },
   contact: {
     phone: "074489 79627",
     phoneHref: "tel:+917448979627",
