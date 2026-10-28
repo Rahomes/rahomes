@@ -46,18 +46,27 @@ export const metadata: Metadata = {
     siteName: site.brand.fullName,
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1024,
+        height: 1024,
+        alt: site.brand.fullName,
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: site.brand.fullName,
     description: site.seo.shareDescription,
+    images: ["/logo.png"],
   },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
       { url: "/favicon-16.png", type: "image/png", sizes: "16x16" },
-      { url: "/logo.jpg", type: "image/jpeg", sizes: "192x192" },
+      { url: "/logo.png", type: "image/png", sizes: "1024x1024" },
     ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",

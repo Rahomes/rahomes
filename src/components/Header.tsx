@@ -43,14 +43,14 @@ export function Header() {
             : "border-b border-transparent bg-white/95 backdrop-blur-md"
         }`}
       >
-        <div className="container-site flex h-16 items-center justify-between gap-3 sm:h-[4.5rem]">
+        <div className="container-site flex h-[4.25rem] items-center justify-between gap-3 sm:h-[4.75rem]">
           <a
             href="#top"
             className="min-w-0 shrink-0"
             onClick={() => setOpen(false)}
             aria-label="RA HOMES home"
           >
-            <BrandMark priority size="sm" />
+            <BrandMark priority size="md" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex">
