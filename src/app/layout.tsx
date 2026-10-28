@@ -41,8 +41,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: site.brand.fullName,
-    description:
-      "Transform your space into a masterpiece — residential interiors crafted with care.",
+    description: `${site.hero.headline} — residential interiors crafted with care.`,
     type: "website",
     locale: "en_IN",
   },
