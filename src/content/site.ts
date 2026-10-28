@@ -10,7 +10,7 @@ export const site = {
     tagline: "INTERIORS WORLD",
     fullName: "RA HOMES INTERIORS WORLD",
   },
-  /** Page + social share copy — keep free of filler taglines like “masterpiece”. */
+  /** Page + social share copy. */
   seo: {
     description:
       "RA HOMES INTERIORS WORLD — residential interior design in Thiruninravur, Tamil Nadu. Modular kitchens, wardrobes, living spaces, and full-home turnkey interiors.",
