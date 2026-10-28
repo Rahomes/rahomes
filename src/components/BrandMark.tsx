@@ -56,7 +56,6 @@ export function BrandMark({
             className={`block font-display font-extrabold tracking-[0.04em] text-[#1E4A28] ${nameSizes[size].name}`}
           >
             {brand.name}
-            <span className="text-[#1E4A28]">.</span>
           </span>
           <span
             className={`mt-1 block font-bold uppercase text-[#1E4A28]/80 ${nameSizes[size].tag}`}

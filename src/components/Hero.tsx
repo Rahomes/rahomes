@@ -45,7 +45,6 @@ export function Hero() {
         <div className="max-w-3xl">
           <p className="animate-fade-in font-display text-3xl font-extrabold tracking-[0.04em] text-on-dark sm:text-4xl md:text-5xl">
             {brand.name}
-            <span className="text-white">.</span>
           </p>
           <p className="animate-fade-in mt-1.5 text-[0.7rem] font-bold tracking-[0.22em] text-white uppercase">
             {brand.tagline}
