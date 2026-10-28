@@ -48,9 +48,9 @@ export function Header() {
             href="#top"
             className="min-w-0 shrink-0"
             onClick={() => setOpen(false)}
-            aria-label="RA HOMES home"
+            aria-label={`${site.brand.fullName} home`}
           >
-            <BrandMark priority size="md" />
+            <BrandMark priority size="sm" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex">
