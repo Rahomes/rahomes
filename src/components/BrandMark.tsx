@@ -1,16 +1,14 @@
-import Image from "next/image";
-
 type BrandMarkProps = {
   className?: string;
   priority?: boolean;
   size?: "sm" | "md" | "lg";
 };
 
-/** Display sizes — source asset stays 1024×1024 for sharpness. */
+/** Display sizes — always the official mark file, never recompressed. */
 const sizes = {
-  sm: { className: "h-11 w-11" },
-  md: { className: "h-14 w-14 sm:h-16 sm:w-16" },
-  lg: { className: "h-24 w-24" },
+  sm: "h-11 w-11",
+  md: "h-14 w-14 sm:h-16 sm:w-16",
+  lg: "h-24 w-24",
 };
 
 export function BrandMark({
@@ -18,17 +16,16 @@ export function BrandMark({
   priority = false,
   size = "md",
 }: BrandMarkProps) {
-  const dim = sizes[size];
-
   return (
-    <Image
+    // eslint-disable-next-line @next/next/no-img-element -- serve exact logo bytes, no optimizer
+    <img
       src="/logo.png"
       alt="RA HOMES"
       width={1024}
       height={1024}
-      quality={100}
-      priority={priority}
-      className={`${dim.className} object-contain ${className}`}
+      decoding="async"
+      {...(priority ? { fetchPriority: "high" as const } : {})}
+      className={`${sizes[size]} object-contain ${className}`}
     />
   );
 }

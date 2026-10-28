@@ -46,20 +46,12 @@ export const metadata: Metadata = {
     siteName: site.brand.fullName,
     type: "website",
     locale: "en_IN",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1024,
-        height: 1024,
-        alt: site.brand.fullName,
-      },
-    ],
+    // Image: src/app/opengraph-image.png (official mark only)
   },
   twitter: {
     card: "summary",
     title: site.brand.fullName,
     description: site.seo.shareDescription,
-    images: ["/logo.png"],
   },
   icons: {
     icon: [
