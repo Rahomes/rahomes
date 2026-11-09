@@ -3,12 +3,10 @@
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
 import { BrandMark } from "./BrandMark";
-import { useQuote } from "./QuoteProvider";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { openQuote } = useQuote();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -66,13 +64,12 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <button
-              type="button"
-              onClick={openQuote}
+            <a
+              href={site.contact.phoneHref}
               className="hidden min-h-10 items-center justify-center rounded bg-[#1e4a28] px-3 text-[0.65rem] font-bold tracking-[0.05em] text-white uppercase transition-colors hover:bg-[#16381e] sm:inline-flex sm:px-4"
             >
-              Get a Free Quote
-            </button>
+              Call Now
+            </a>
 
             <button
               type="button"
@@ -129,19 +126,9 @@ export function Header() {
           </nav>
 
           <div className="mt-auto space-y-3 pt-8">
-            <button
-              type="button"
-              className="flex min-h-12 w-full items-center justify-center rounded bg-[#1e4a28] px-5 text-sm font-bold tracking-[0.05em] text-white uppercase"
-              onClick={() => {
-                setOpen(false);
-                openQuote();
-              }}
-            >
-              Get a Free Quote
-            </button>
             <a
               href={site.contact.phoneHref}
-              className="flex min-h-12 w-full items-center justify-center rounded border-2 border-[#1e4a28] px-5 text-sm font-bold tracking-[0.05em] text-[#1e4a28] uppercase"
+              className="flex min-h-12 w-full items-center justify-center rounded bg-[#1e4a28] px-5 text-sm font-bold tracking-[0.05em] text-white uppercase"
               onClick={() => setOpen(false)}
             >
               Call {site.contact.phone}

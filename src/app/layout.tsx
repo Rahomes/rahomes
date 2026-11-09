@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import { site } from "@/content/site";
-import { QuoteProvider } from "@/components/QuoteProvider";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -72,7 +71,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${display.variable} ${sans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg font-sans text-ink">
-        <QuoteProvider>{children}</QuoteProvider>
+        {children}
       </body>
     </html>
   );

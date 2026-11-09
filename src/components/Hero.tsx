@@ -3,13 +3,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
-import { useQuote } from "./QuoteProvider";
 
 export function Hero() {
   const { brand, hero } = site;
   const slides = hero.slides;
   const [active, setActive] = useState(0);
-  const { openQuote } = useQuote();
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -78,13 +76,9 @@ export function Hero() {
             <a href={hero.ctaPrimary.href} className="btn btn-accent">
               {hero.ctaPrimary.label}
             </a>
-            <button
-              type="button"
-              onClick={openQuote}
-              className="btn btn-ghost"
-            >
+            <a href={hero.ctaSecondary.href} className="btn btn-ghost">
               {hero.ctaSecondary.label}
-            </button>
+            </a>
           </div>
         </div>
 

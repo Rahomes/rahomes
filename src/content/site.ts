@@ -1,7 +1,7 @@
 /**
  * Central site content — edit here to rebrand or update copy.
  * Modern studio UI with logo-aligned forest green accents.
- * Future: enquiry form / WhatsApp can plug into contact.* hooks.
+ * Contact CTAs dial the studio directly (no quote form / DB).
  */
 
 export const site = {
@@ -43,7 +43,7 @@ export const site = {
     support:
       "From modular kitchens to full-home interiors — planned with care, built with craft, finished for everyday comfort.",
     ctaPrimary: { label: "View Projects", href: "#work" },
-    ctaSecondary: { label: "Get a Free Quote", href: "#quote" },
+    ctaSecondary: { label: "Call Now", href: "tel:+917448979627" },
     slides: [
       {
         title: "Soft Modern Living",
@@ -274,13 +274,14 @@ export const site = {
     ],
   },
   cta: {
-    eyebrow: "Free quote",
+    eyebrow: "Talk to us",
     title: "Let’s design your next home chapter",
     support:
-      "Share your layout, budget, and timeline — we’ll reply with clear next steps. No obligation.",
+      "Call the studio to share your layout, budget, and timeline — we’ll guide you on clear next steps.",
     phoneLabel: "Call the studio",
     phone: "074489 79627",
     phoneHref: "tel:+917448979627",
+    primary: { label: "Call Now", href: "tel:+917448979627" },
     secondary: { label: "See our work", href: "#work" },
     note: "Thiruninravur · Chennai outskirts",
   },
@@ -288,7 +289,7 @@ export const site = {
     eyebrow: "Contact",
     title: "Visit The Studio",
     support:
-      "Request a free quote online, call us, or visit our studio in Thiruninravur.",
+      "Call us or visit our studio in Thiruninravur — we’re happy to discuss your home interiors.",
   },
   footer: {
     blurb:

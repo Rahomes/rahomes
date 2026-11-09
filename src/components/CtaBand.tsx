@@ -1,12 +1,8 @@
-"use client";
-
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
-import { useQuote } from "./QuoteProvider";
 
 export function CtaBand() {
   const { cta } = site;
-  const { openQuote } = useQuote();
 
   return (
     <section className="bg-[#1e4a28]">
@@ -40,17 +36,16 @@ export function CtaBand() {
                   {cta.phone}
                 </a>
                 <p className="mt-3 text-sm leading-relaxed text-[#2c342e]">
-                  Prefer a written brief? Request a free quote online.
+                  Tap to call the studio directly — no form needed.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <button
-                    type="button"
-                    onClick={openQuote}
+                  <a
+                    href={cta.primary.href}
                     className="inline-flex min-h-12 flex-1 items-center justify-center rounded bg-[#1e4a28] px-5 text-xs font-bold tracking-[0.06em] text-white uppercase transition-colors hover:bg-[#16381e]"
                   >
-                    Get a Free Quote
-                  </button>
+                    {cta.primary.label}
+                  </a>
                   <a
                     href={cta.secondary.href}
                     className="inline-flex min-h-12 flex-1 items-center justify-center rounded border-2 border-[#1e4a28] bg-transparent px-5 text-xs font-bold tracking-[0.06em] text-[#1e4a28] uppercase transition-colors hover:bg-[#eef2e8]"

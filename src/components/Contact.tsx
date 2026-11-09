@@ -1,12 +1,8 @@
-"use client";
-
 import { site } from "@/content/site";
 import { Reveal } from "./Reveal";
-import { useQuote } from "./QuoteProvider";
 
 export function Contact() {
   const { contact, contactSection } = site;
-  const { openQuote } = useQuote();
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     contact.address.mapsQuery,
   )}`;
@@ -23,11 +19,16 @@ export function Contact() {
             {contactSection.support}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={openQuote} className="btn btn-accent">
-              Get a Free Quote
-            </button>
-            <a href={contact.phoneHref} className="btn btn-outline">
+            <a href={contact.phoneHref} className="btn btn-accent">
               Call {contact.phone}
+            </a>
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              Get Directions
             </a>
           </div>
         </Reveal>
